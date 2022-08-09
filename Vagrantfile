@@ -41,7 +41,7 @@ def create_nvme_disks(vbox, name)
   dir = "../vdisks"
   FileUtils.mkdir_p dir unless File.directory?(dir)
 
-  disks = (0..6).map { |x| ["nvmedisk#{x}", '1024'] }
+  disks = (0..4).map { |x| ["nvmedisk#{x}", '1024'] }
 
   disks.each_with_index do |(name, size), i|
     file_to_disk = "#{dir}/#{name}.vdi"
